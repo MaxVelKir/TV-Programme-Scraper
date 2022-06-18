@@ -159,11 +159,7 @@ cur = con.cursor()
 
 
 # Crawler setup
-process = CrawlerProcess(settings={
-    "FEEDS": {
-        "items.json": {"format": "json"},
-    },
-})
+process = CrawlerProcess()
 
 process.crawl(ProgramSpider)
 
