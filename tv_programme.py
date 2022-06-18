@@ -157,18 +157,14 @@ def list_programme():
 con = sqlite3.connect('db.sqlite')
 cur = con.cursor()
 
-
 # Crawler setup
 process = CrawlerProcess()
-
 process.crawl(ProgramSpider)
-
 
 # Tkinter window setup
 root = tk.Tk()
 root.title('TV Programme browser')
 root.geometry('800x600+50+50')
-
 
 command_label = ttk.Label(root, text='Search programme:')
 command_label.pack(ipady=5)
@@ -200,7 +196,6 @@ list_button = ttk.Button(
     width=50
 )
 list_button.pack(pady=20)
-
 
 columns = ('show', 'time', 'date', 'tv_network')
 
